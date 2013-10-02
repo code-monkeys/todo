@@ -3,3 +3,5 @@ bin/*
 include/*
 lib/*
 .Python
+todo.txt
+users.txt
