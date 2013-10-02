@@ -5,44 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="{{ css }}" rel="stylesheet" media="screen" />
-	<link href="{{ themecss }}" rel="stylesheet" media="screen" />
+	<!--<link href="./static/css/bootstrap-theme.min.css" rel="stylesheet" media="screen" />-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
+      <script src="./static/js/html5shiv.js"></script>
+      <script src="./static/js/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
 	  <div id="wrap">
-	  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Todo</a>
-	    </div>
-	    <div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a class="dropbown-toggle" data-toggle="dropdown" href="#">Login</a>
-					<div class="dropdown-menu">
-	    	 			<form role="search" accept-charset="utf-8" method="post" action="./login">
-	  						<input name="username" type="text" placeholder="Username" class="form-control"/>
-	  				   	  	<input name="password" type="password" placeholder="password" class="form-control">
-	  				   		<input type="submit" name="submit" class="btn btn-default btn-block"/>
-	    		  	  	</form>
-					</div>
-				</li>
-	    </div><!-- /.navbar-collapse -->
-	  </nav>
-	<div class="container" style="margin-top:70px;">
-    	<h1>Login</h1>
-		<form action="./login" method="post" accept-charset="utf-8" class="form-group">
-			<input name="username" type="text" placeholder="Username" class="form-control"/>
-   		  	<input name="password" type="password" placeholder="password" class="form-control">
-   			<input type="submit" name="submit" class="btn btn-primary"/>
-		</form>
-	</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//code.jquery.com/jquery.js"></script>
+		  <nav class="navbar navbar-default" role="navigation">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="./">Todo</a>
+			    </div>
+	   		 <div class="collapse navbar-collapse navbar-ex1-collapse">
+				 <ul class="nav navbar-nav navbar-right">
+					 <li class="dropdown">
+						 <a class="dropbown-toggle" data-toggle="dropdown" href="#">Login</a>
+						 <div class="dropdown-menu">
+	    					 <form accept-charset="utf-8" method="post" action="./login">
+	  							<input name="username" type="text" placeholder="Username" class="form-control"/>
+	  							<input name="password" type="password" placeholder="Password" class="form-control">
+	  							<input type="submit" name="submit" value="Login" class="btn btn-default btn-block"/>
+	    		  			</form>
+						</div>
+					</li>
+	  		  </div><!-- /.navbar-collapse -->
+	 	 </nav>
+		 <div class="container">
+   		  <h1>Login</h1>
+			<form action="./login" method="post" accept-charset="utf-8" class="form-inline">
+				<div class="form-group">
+					<input name="username" type="text" placeholder="Username" class="form-control inline-input"/>
+				</div>
+				<div class="form-group">
+   				 <input name="password" type="password" placeholder="Password" class="form-control inline-input" />
+				</div>
+				<div class="form-group">
+  				  <input type="submit" name="submit" value="Login" class="btn btn-primary"/>
+				</div>
+			</form>
+		</div>
+   	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   	<script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ js}}"></script>
   </body>
