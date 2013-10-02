@@ -1,6 +1,6 @@
 # Todo
 A web interface for the coolest kind of todo-list: a simple plain file!  
-maybe it'll change its name soon.
+There's a cli: [todo-cli](https://github.com/lukasepple/todo-cli)
 ## Installation
 Only use it for testing etc. i don't know if it's really stable.  
 So:
