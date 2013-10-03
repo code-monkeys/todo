@@ -1,4 +1,4 @@
-#!bin/python3.3
+#!bin/python
 from flask import Flask, render_template, request, session, url_for, redirect, escape
 from hashlib import md5, sha256
 

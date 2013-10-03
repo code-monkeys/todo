@@ -7,7 +7,7 @@ So:
 	
 	git clone https://github.com/lukasepple/todo.git
 	cd todo
-	virtualenv .
+	virtualenv -p python3.3 .
 	source bin/activate
 	pip-3.3 install -r requirements.txt
 
