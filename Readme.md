@@ -11,7 +11,7 @@ So:
 	source bin/activate
 	pip-3.3 install -r requirements.txt
 
-Edit `app.py`, change `salt` and `app.secret_key` (use something random!)  
+Edit `app.py`, change `app.secret_key` (use something random!). Then create `salt.txt` and insert something random, too.  
 Then use `gen_hash.py` to generate a salt of the passwort you want to use. Then open users.txt and insert:
 	
 	USERNAME HASH todofile
