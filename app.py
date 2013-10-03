@@ -51,7 +51,7 @@ def get_todos():
     except:
         return [["Dateifehler beim holen der Todos.", 42000000000]] # Yeah you shouldn't do thinks like this.
 def mkerror(title, text):
-    return render_template("error.html", errortitle=title, errortext=text, css=url_for('static', filename='css/bootstrap.css'), js=url_for('static',filename='js/bootstrap.min.js'))
+    return render_template("error.html", errortitle=title, errortext=text, base=url_for('index'))
 
 #########################
 # The Pages             #
@@ -61,9 +61,9 @@ def mkerror(title, text):
 @app.route('/')
 def index():
     if 'username' in session:
-        return render_template("todos.html", todos=get_todos(), css=url_for('static', filename='css/bootstrap.css'),  js=url_for('static',filename='js/bootstrap.min.js'))
+        return render_template("todos.html", todos=get_todos(), base=url_for('index'))
     else:
-        return render_template("loginform.html", css=url_for('static', filename='css/bootstrap.css'),  js=url_for('static',filename='js/bootstrap.min.js'))
+        return render_template("loginform.html", base=url_for('index'))
 
 # Todo managment
 @app.route('/add', methods=['POST'])

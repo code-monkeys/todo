@@ -4,7 +4,7 @@
     <title>To Do</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="{{ css }}" rel="stylesheet" media="screen" />
+    <link href="{{ base }}static/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<!-- Without Theme CSS it looks better.
 		<link href="./static/css/bootstrap-theme.min.css" rel="stylesheet" media="screen" />-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,7 +24,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="./">Todo</a>
+		      <a class="navbar-brand" href="{{ base }}">Todo</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,10 +38,10 @@
 		<h1>Todos</h1>
 		<ul class="list-group">
 		{% for todo in todos %}
-		  <li class="list-group-item">{{ todo[0] }} <form action="./delete" method="post" style="float:right"><button class="btn btn-danger btn-xs" name="delete" value="{{ todo[1] }}"><span class="glyphicon glyphicon-remove"></span></button></form></li>
+		  <li class="list-group-item">{{ todo[0] }} <form action="{{ base }}delete" method="post" style="float:right"><button class="btn btn-danger btn-xs" name="delete" value="{{ todo[1] }}"><span class="glyphicon glyphicon-remove"></span></button></form></li>
 		{% endfor %}
 			<li class="list-group-item">
-				<form action="./add" method="post" class="form-group form-inline">
+				<form action="{{ base }}add" method="post" class="form-group form-inline">
 					<input type="text" name="todo" class="form-control" autofocus="autofocus" placeholder="Enter new Todo and hit Enter" />
 				</form>
 			</li>
@@ -51,6 +51,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ js }}"></script>
+    <script src="{{ base }}static/js/bootstrap.min.js"></script>
   </body>
 </html>
