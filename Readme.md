@@ -14,7 +14,7 @@ So:
 Edit `app.py`, change `app.secret_key` (use something random!). Then create `salt.txt` and insert something random, too.  
 Then use `hash_gen.py` to generate a salt of the passwort you want to use. Then open users.txt and insert:
 	
-	USERNAME HASH todofile
+	USERNAME HASH /path/to/todofile
 	
 todofile means the location where the todo.txt should be stored (create this file!).  
 You can add **more than one user** like that!  
